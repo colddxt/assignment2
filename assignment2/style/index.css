@@ -1,0 +1,104 @@
+body {
+  width: 90%;
+  max-width: 1024px;
+  margin:2em auto;
+  border: 2px solid black;
+  border-radius: 2em;
+}
+
+header{text-align: center;}
+header img {width: 100px;}
+header h1{font-family: times;}
+header h3{font-family: times;}
+
+#nav_menu ul {
+  padding:0.2em auto;
+  list-style: none;
+  position: relative;
+}
+#nav_menu ul li {
+  float: left;
+  width: 49%;
+}
+#nav_menu ul li a {
+  font-style: italic;
+  font-family: times;
+  text-align: center;
+  display: block;
+  padding: 1em 0;
+  border: 1px solid black;
+  margin: 2px 0;
+  font-size: 95%;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border-right: 0.1em solid white;
+  border-left: 0.1em solid white;
+}
+#nav_menu ul ul {
+  display: none;
+  width:25%;
+  position: absolute;
+
+}
+#nav_menu ul ul li {
+  float:none;
+  width:100%;
+  margin-top: 0.1em;
+}
+#nav_menu ul li:hover > ul{display:block;}
+#nav_menu > ul::after {
+  content: "";
+  display: block;
+  clear:both;
+}
+#nav_menu ul li a.lastitem {border-right: none;}
+
+main fieldset{
+  width:35em;
+  max-width: 95%;
+  margin: 1em auto;
+}
+main form{padding-top: 1em;}
+main label{
+  float: left;
+  width: 30%;
+  text-align: right;
+}
+main input, select{
+  width: 60%;
+  margin-left: .5em;
+  margin-bottom: .5em;
+}
+input:required, input[required]{border: 2px solid green;}
+input:valid{border: 1px solid black;}
+input:invalid{box-shadow: none;}
+br{clear: both;}
+#submit{width:5em;}
+
+footer {
+  border-top: 2px solid #000;
+  text-align: center;
+}
+footer ul{list-style: none;}
+footer ul li{
+  width:25%;
+  float:left;
+}
+footer ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (min-width:479px){
+  #nav_menu ul{padding-left: 0.8em;}
+}
+@media only screen and (min-width:767px) {
+  #nav_menu ul{padding-left: 0;}
+  #nav_menu ul li{width: 25%;}
+  header{text-align: left;}
+  header img {
+    padding-left: 1em;
+    float:left;}
+  header h3 {float:left;}
+}
